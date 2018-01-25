@@ -1,4 +1,5 @@
 require 'pp'
+require 'pry'
 
 class BoardCase
   attr_reader :nom
@@ -11,18 +12,17 @@ class BoardCase
   def etat
     return $etat
   end
-=begin def nom
+  def nom
     return @nom
   end
-=end  
   def info
     return "la case #{@nom} est #{$etat}"
   end
+
 end
 
 class Board
   attr_accessor :boardcases
-
   def initialize
     puts "création du plateau"
 
@@ -39,18 +39,45 @@ class Board
     @boardcases = boardcases
     @boardcases = [@a1,@a2,@a3,@b1,@b2,@b3,@c1,@c2,@c3]
   end
-  
+
   def interface
     puts 	"#{@a1.etat} | #{@a2.etat} | #{@a3.etat}"
     puts	"#{@b1.etat} | #{@b2.etat} | #{@b3.etat}"
     puts	"#{@c1.etat} | #{@c2.etat} | #{@c3.etat}"
   end
+  
 end
+
+class Player
+	attr_accessor :nom, :valeur
+	def initialize(nom,valeur)
+		@nom = nom
+		@valeur = valeur
+		win = false
+	end
+
+	def se_declare
+		puts "Je suis #{@nom} et je joue les #{@valeur}"
+	end
+
+	def play(shot)
+  	@shot = shot
+  	@shot = Player(valeur)
+  end
+end
+
 #---------------------------
 
 plateau = Board.new
-p plateau.interface
+ben = Player.new("ben","X")
+tom = Player.new("tom","O")
 
+plateau.interface
+
+ben.se_declare
+tom.se_declare
+
+ben.play(@a1)
 
 
 

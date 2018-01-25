@@ -1,1 +1,5 @@
-Bonjour Toto 
+class BoardCase
+  
+
+  
+  def initialize

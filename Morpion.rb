@@ -1,23 +1,35 @@
 class BoardCase
-	attr_accessor :etat, :nom
+  attr_reader :nom
+  attr_accessor :etat
 
   def initialize(etat,nom)
-  	@etat = etat
-  	@nom = nom
-  	
+    @etat = etat
+    @nom = nom
+    @etat = "vide"
   end
 
   def etat
-  	return @etat
-	end
+    return @etat
+  end
 
+  def nom
+    return @nom
+  end
 
-	def nom
-		return @nom
+  def info
+    return "la case #{@nom} est #{@etat}"
+  end
 
-	end
+  def nouvel_etat(nv_etat)
+ 	 @etat = nv_etat
+ 	 if nv_etat == "X" || nv_etat == "O"
+ 	 	puts "Cette case est prise"
+ 	 end
+  end
 end
-a1 = BoardCase.new("vide","a1")
 
-p a1.nom
-p a1.etat
+a1 = BoardCase.new("","a1")
+
+p a1.info
+a1.nouvel_etat("X")
+p a1.info

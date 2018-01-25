@@ -37,7 +37,7 @@ class Board
     @c3 = BoardCase.new("_","c3")
 
     @boardcases = boardcases
-    @boardcases = [@a1,@a2,@a3,@b1,@b2,@b3,@c1,@c2,@c3].etat
+    @boardcases = [@a1.etat,@a2.etat,@a3.etat,@b1.etat,@b2.etat,@b3.etat,@c1.etat,@c2.etat,@c3.etat]
   end
 
   def interface
@@ -62,7 +62,8 @@ class Player
 
 	def play(shot)
   	@shot = shot
-  	@shot = @boardcases
+
+  	
   end
 end
 
@@ -77,7 +78,7 @@ plateau.interface
 ben.se_declare
 tom.se_declare
 
-ben.play(@a1)
+
 
 
 

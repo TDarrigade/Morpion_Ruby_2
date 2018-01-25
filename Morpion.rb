@@ -20,16 +20,29 @@ class BoardCase
     return "la case #{@nom} est #{@etat}"
   end
 
-  def nouvel_etat(nv_etat)
- 	 @etat = nv_etat
- 	 if nv_etat == "X" || nv_etat == "O"
- 	 	puts "Cette case est prise"
- 	 end
+end
+
+class Board
+  attr_accessor :a1, :a2, :a3, :b1, :b2, :b3, :c1, :c2, :c3
+
+  def initialize
+    puts "création du plateau"
+    @boardcases = boardcases
+  end
+  def boardcases 
+    a1 = BoardCase.new("","a1")
+    a2 = BoardCase.new("","a2")
+    a3 = BoardCase.new("","a3")
+    b1 = BoardCase.new("","b1")
+    b2 = BoardCase.new("","b2")
+    b3 = BoardCase.new("","b3")
+    c1 = BoardCase.new("","c1")
+    c2 = BoardCase.new("","c2")
+    c3 = BoardCase.new("","c3")
+
   end
 end
 
-a1 = BoardCase.new("","a1")
-
-p a1.info
-a1.nouvel_etat("X")
-p a1.info
+plateau = Board.new
+plateau.boardcases
+puts plateau

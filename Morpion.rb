@@ -1,5 +1,5 @@
-class BoardCase
-  
-
-  
+class BoardCase  
   def initialize
+  	
+  end
+end

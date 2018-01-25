@@ -2,7 +2,7 @@
 
 class Board
 
-  def initialize #Affiche les règles et un exemple
+  def initialize #Affiche les règles
     puts "\n"
     puts "-----------------------------------"
     puts " Bienvenue dans le jeu du morpion"

@@ -1,6 +1,6 @@
 ## Jeu du Morpion
 
-J'ai fait 2 jeux, il n'y a que la version 2 avec les hash qui fonctionne
+J'ai fait 2 jeux, le premier n'a jamais marché, du coup je me suis fortemeent inspiré du code d'un collegue de mon groupe pour le 2èeme.
 
 ## Règle du jeu
 

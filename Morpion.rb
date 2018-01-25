@@ -11,10 +11,9 @@ class BoardCase
   def etat
     return $etat
   end
-=begin def nom
+  def nom
     return @nom
   end
-=end  
   def info
     return "la case #{@nom} est #{$etat}"
   end
@@ -41,11 +40,12 @@ class Board
   end
   
   def interface
-    puts 	"#{@a1.etat} | #{@a2.etat} | #{@a3.etat}"
+    puts 	"#{@a1.etat(X)} | #{@a2.etat} | #{@a3.etat}"
     puts	"#{@b1.etat} | #{@b2.etat} | #{@b3.etat}"
     puts	"#{@c1.etat} | #{@c2.etat} | #{@c3.etat}"
   end
 end
+
 #---------------------------
 
 plateau = Board.new
